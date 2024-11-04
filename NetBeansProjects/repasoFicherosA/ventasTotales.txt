@@ -1,0 +1,69 @@
+------sucursal1------
+Comprador{nombre=Apple} 01/01/2024 250.75
+Comprador{nombre=Microsoft} 02/01/2024 320.1
+Comprador{nombre=Google} 03/01/2024 410.0
+Comprador{nombre=Amazon} 04/01/2024 180.5
+Comprador{nombre=Tesla} 05/01/2024 525.8
+Comprador{nombre=Apple} 06/01/2024 220.3
+Comprador{nombre=Samsung} 07/01/2024 350.75
+Comprador{nombre=Microsoft} 08/01/2024 310.4
+Comprador{nombre=Apple} 09/01/2024 450.0
+Comprador{nombre=Amazon} 10/01/2024 275.2
+Comprador{nombre=Google} 11/01/2024 500.0
+Comprador{nombre=Tesla} 12/01/2024 620.5
+Comprador{nombre=Apple} 13/01/2024 390.0
+Comprador{nombre=Microsoft} 14/01/2024 450.9
+Comprador{nombre=Amazon} 15/01/2024 300.25
+Comprador{nombre=Google} 16/01/2024 520.75
+Comprador{nombre=Samsung} 17/01/2024 490.1
+Comprador{nombre=Microsoft} 18/01/2024 580.4
+Comprador{nombre=Apple} 19/01/2024 610.3
+Comprador{nombre=Amazon} 20/01/2024 340.9
+Ventas totales
+Comprador{nombre=Google}=476.9166666666667
+Comprador{nombre=Apple}=384.27
+Comprador{nombre=Samsung}=420.425
+Comprador{nombre=Microsoft}=415.45000000000005
+Comprador{nombre=Tesla}=573.15
+Comprador{nombre=Amazon}=274.2125
+Promedio de ventas de Sucursal 1: 404
+Promedio de ventas de Sucursal 2: 404
+------sucursal2------
+Comprador{nombre=Microsoft} 01/01/2024 290.3
+Comprador{nombre=Apple} 02/01/2024 370.1
+Comprador{nombre=Google} 03/01/2024 310.2
+Comprador{nombre=Amazon} 04/01/2024 190.75
+Comprador{nombre=Tesla} 05/01/2024 480.9
+Comprador{nombre=Apple} 06/01/2024 245.5
+Comprador{nombre=Google} 07/01/2024 320.8
+Comprador{nombre=Amazon} 08/01/2024 350.4
+Comprador{nombre=Tesla} 09/01/2024 420.3
+Comprador{nombre=Microsoft} 10/01/2024 390.75
+Comprador{nombre=Samsung} 11/01/2024 440.5
+Comprador{nombre=Google} 12/01/2024 510.2
+Comprador{nombre=Apple} 13/01/2024 280.0
+Comprador{nombre=Microsoft} 14/01/2024 500.6
+Comprador{nombre=Samsung} 15/01/2024 460.8
+Comprador{nombre=Tesla} 16/01/2024 560.4
+Comprador{nombre=Amazon} 17/01/2024 370.25
+Comprador{nombre=Microsoft} 18/01/2024 490.1
+Comprador{nombre=Google} 19/01/2024 530.3
+Comprador{nombre=Apple} 20/01/2024 330.9
+Ventas totales
+Comprador{nombre=Google}=417.875
+Comprador{nombre=Apple}=306.625
+Comprador{nombre=Samsung}=450.65
+Comprador{nombre=Microsoft}=417.9375
+Comprador{nombre=Tesla}=487.2
+Comprador{nombre=Amazon}=303.8
+Promedio de ventas de Sucursal 1: 404
+Promedio de ventas de Sucursal 2: 391
+Ventas totales
+Comprador{nombre=Google}=443.17857142857144
+Comprador{nombre=Apple}=349.7611111111111
+Comprador{nombre=Samsung}=435.53749999999997
+Comprador{nombre=Microsoft}=416.69375
+Comprador{nombre=Tesla}=521.5799999999999
+Comprador{nombre=Amazon}=286.89285714285717
+Promedio de ventas de Sucursal 1: 404
+Promedio de ventas de Sucursal 2: 391
