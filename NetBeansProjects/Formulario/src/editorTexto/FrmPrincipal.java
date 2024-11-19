@@ -4,6 +4,7 @@
  */
 package editorTexto;
 
+import java.awt.Color;
 import java.awt.Font;
 import java.awt.HeadlessException;
 import java.io.File;
@@ -14,12 +15,14 @@ import java.io.OutputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.stream.FileImageInputStream;
+import javax.swing.JColorChooser;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.JTextPane;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.DefaultStyledDocument;
 import javax.swing.text.Document;
+import javax.swing.text.StyledEditorKit;
 
 /**
  *
@@ -299,27 +302,28 @@ public class FrmPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btPegarActionPerformed
 
     private void btNegritaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btNegritaActionPerformed
-
+        new StyledEditorKit.BoldAction().actionPerformed(null);
     }//GEN-LAST:event_btNegritaActionPerformed
 
     private void btCursivaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btCursivaActionPerformed
-        // TODO add your handling code here:
+        new StyledEditorKit.ItalicAction().actionPerformed(null);
     }//GEN-LAST:event_btCursivaActionPerformed
 
     private void btSubrayadoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btSubrayadoActionPerformed
-        // TODO add your handling code here:
+        new StyledEditorKit.UnderlineAction().actionPerformed(null);
     }//GEN-LAST:event_btSubrayadoActionPerformed
 
     private void btFuenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFuenteActionPerformed
-        fuente();
+        new StyledEditorKit.FontFamilyAction("Comic Sans", Font.SANS_SERIF).actionPerformed(null);
     }//GEN-LAST:event_btFuenteActionPerformed
 
     private void btTamañoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btTamañoActionPerformed
-        tamaño();
+        new StyledEditorKit.FontSizeAction("", 24).actionPerformed(null);
     }//GEN-LAST:event_btTamañoActionPerformed
 
     private void btColorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btColorActionPerformed
-        // TODO add your handling code here:
+        Color colorSelec = JColorChooser.showDialog(null, "Elige una opcion", Color.GRAY);
+        new StyledEditorKit.ForegroundAction("", colorSelec).actionPerformed(null);
     }//GEN-LAST:event_btColorActionPerformed
 
     /**
@@ -466,25 +470,8 @@ public class FrmPrincipal extends javax.swing.JFrame {
         
     }
 
-    private String fuente() {
-        String nombre;
-                
-        String[] nombres = {"Arial", "Berlin Sans FB","Calibri", "Comic Sans MS", "Impact", "Monotype Corsiva", "Tahoma","Times New Roman","Verdana"};
-        Object selection = JOptionPane.showInputDialog(null,"Elija una Fuente","Seleccion",JOptionPane.QUESTION_MESSAGE,null,nombres,null);
-        //JOptionPane.showMessageDialog(null, "Introduciste: " + selection);
-        nombre=selection.toString();
-        pnTxt.setFont(new Font(nombre, WIDTH, 12));
-        return nombre;
-    }
+    
 
-    private int tamaño() {
-        int tam;        
-        String[] nombres = {"12", "14", "16", "18", "20", "22","24","26","28","30","32"};
-        Object selection = JOptionPane.showInputDialog(null,"Elija el tamaño","Seleccion",JOptionPane.QUESTION_MESSAGE,null,nombres,null);
-        //JOptionPane.showMessageDialog(null, "Introduciste: " + selection);
-        tam=Integer.parseInt((String)selection);
-        return tam;
-
-    }
+    
 
 }

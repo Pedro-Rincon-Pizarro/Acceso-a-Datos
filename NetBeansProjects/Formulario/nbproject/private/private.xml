@@ -8,7 +8,20 @@
             <file>file:/C:/Users/pedro.rinpiz/OneDrive%20-%20Educacyl/2º/pc%202º/Documentos/NetBeansProjects/Formulario/src/menu/casa.png</file>
         </group>
         <group>
-            <file>file:/C:/Users/pedro.rinpiz/OneDrive%20-%20Educacyl/2º/pc%202º/Documentos/NetBeansProjects/Formulario/src/editorTexto/FrmPrincipal.java</file>
+            <file>file:/C:/Users/pedro.rinpiz/OneDrive%20-%20Educacyl/2º/pc%202º/Documentos/NetBeansProjects/Formulario/src/miBoton2/MiEtiquetaTitulo.java</file>
+            <file>file:/C:/Users/pedro.rinpiz/OneDrive%20-%20Educacyl/2º/pc%202º/Documentos/NetBeansProjects/Formulario/src/miBoton2/FrmPrincipal.java</file>
+            <file>file:/C:/Users/pedro.rinpiz/OneDrive%20-%20Educacyl/2º/pc%202º/Documentos/NetBeansProjects/Formulario/src/miBoton2/BordeRedondeado.java</file>
+            <file>file:/C:/Users/pedro.rinpiz/OneDrive%20-%20Educacyl/2º/pc%202º/Documentos/NetBeansProjects/Formulario/src/miBoton2/MiEtiquetaAyuda.java</file>
+            <file>file:/C:/Users/pedro.rinpiz/OneDrive%20-%20Educacyl/2º/pc%202º/Documentos/NetBeansProjects/Formulario/src/miBoton2/MiBotonAzul.java</file>
+            <file>file:/C:/Users/pedro.rinpiz/OneDrive%20-%20Educacyl/2º/pc%202º/Documentos/NetBeansProjects/Formulario/src/miBoton2/MiCuadrodeTextoFrm.java</file>
+            <file>file:/C:/Users/pedro.rinpiz/OneDrive%20-%20Educacyl/2º/pc%202º/Documentos/NetBeansProjects/Formulario/src/utils/StringUtils.java</file>
+            <file>file:/C:/Users/pedro.rinpiz/OneDrive%20-%20Educacyl/2º/pc%202º/Documentos/NetBeansProjects/Formulario/src/utils/NifValidator.java</file>
+        </group>
+        <group name="NetBeansProjects">
+            <file>file:/C:/Users/pedro.rinpiz/OneDrive%20-%20Educacyl/2º/pc%202º/Documentos/NetBeansProjects/Formulario/src/spinnerRepaso/validarFecha.java</file>
+            <file>file:/C:/Users/pedro.rinpiz/OneDrive%20-%20Educacyl/2º/pc%202º/Documentos/NetBeansProjects/Formulario/src/cambioLookAndField/LookAndFeelJOptionPanel.java</file>
+            <file>file:/C:/Users/pedro.rinpiz/OneDrive%20-%20Educacyl/2º/pc%202º/Documentos/NetBeansProjects/Formulario/src/spinnerRepaso/PruebaSpinnerFecha.java</file>
+            <file>file:/C:/Users/pedro.rinpiz/OneDrive%20-%20Educacyl/2º/pc%202º/Documentos/NetBeansProjects/Formulario/src/cambioLookAndField/FrmPrincipal.java</file>
         </group>
     </open-files>
 </project-private>

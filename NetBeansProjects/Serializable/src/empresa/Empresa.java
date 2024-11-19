@@ -26,12 +26,15 @@ public class Empresa {
         empleados[1] = new Empleado("Lucas", "Garcia", "987654321");
     }
 
-    public void salvar(){
-        try{
+    public void salvar()
+    {
+        try
+        {
             ObjectOutputStream salida = new ObjectOutputStream(new FileOutputStream("personal.txt"));
             salida.writeObject(empleados);
             salida.close();
-        }catch(IOException e){
+        }catch(IOException e)
+        {
             e.printStackTrace(System.err);
         }
     } 
