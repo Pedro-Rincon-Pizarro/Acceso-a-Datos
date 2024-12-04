@@ -12,8 +12,8 @@ import javax.swing.UIManager;
  *
  * @author pedro.rinpiz
  */
-public class FrmPrincipal extends javax.swing.JFrame {
-
+public class FrmPrincipal extends javax.swing.JFrame 
+{
     /**
      * Creates new form FrmPrincipal
      */

@@ -1,3 +1,4 @@
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
@@ -20,7 +21,7 @@ public class Main
 {
     private static File file = new File("notasTotales.txt");
     private static boolean progEsc, bdEsc = false;
-    private static int total = 0;
+    private static double total = 0;
     private static int contador = 0;
     private static double media = 0;
     public static void main(String[] args) throws IOException 
@@ -40,7 +41,7 @@ public class Main
         while((linea = bf.readLine()) != null)
         {
             String [] datos = linea.split(" ");
-            total += Integer.parseInt(datos[datos.length - 1]);
+            total += Double.parseDouble(datos[datos.length - 1]);
             contador++;
             cargarDatos(datos, "prog");
             
@@ -58,7 +59,7 @@ public class Main
         {
             String [] datos = linea.split(" ");
             cargarDatos(datos, "bd");
-            total += Integer.parseInt(datos[datos.length - 1]);
+            total += Double.parseDouble(datos[datos.length - 1]);
             contador++;
         }
         

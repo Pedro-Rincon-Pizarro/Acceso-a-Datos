@@ -16,9 +16,9 @@ import javax.swing.table.DefaultTableModel;
 public class FrmPrincipal extends javax.swing.JFrame {
     ArrayList<Persona>  listaPersonas=new ArrayList<>();
     
-    String              columnas[]={"Dni","Nombre","Apellidos","Trabaja"};
-    boolean             columnasEditables[]={false,false,false,true};
-    Class               tipo[]=new Class[]{java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,java.lang.Boolean.class};
+    String columnas[] = {"Dni","Nombre","Apellidos","Trabaja"};
+    boolean columnasEditables[] = {false,false,false,true};
+    Class tipo[] = new Class[] {java.lang.Object.class,java.lang.Object.class,java.lang.Object.class,java.lang.Boolean.class};
     
     DefaultTableModel modeloP=new DefaultTableModel(){
     
