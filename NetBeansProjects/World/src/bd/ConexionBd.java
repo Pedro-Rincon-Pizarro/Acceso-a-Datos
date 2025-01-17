@@ -16,7 +16,7 @@ public class ConexionBd
 {
     private static final String USER = "root";
     private static final String PWD = "";
-    private static final String URL = "jdbc:MySQL://localhost/world";
+    private static final String URL = "jdbc:MySQL://localhost/wosrld";//world mal escrito para que de error
     
     public static Connection conectarBD()
     {
@@ -26,8 +26,11 @@ public class ConexionBd
             return conexion;
         } catch (SQLException e) {
             System.err.println("Error al conectar la base de datos");
-            throw new RuntimeException("no se pudo conectar", e);
+            System.err.println("Error " + e.getErrorCode());//añadido este error
+            System.err.println("Error " + e.getSQLState());//añadido este error
+            //throw new RuntimeException("no se pudo conectar", e);
         }
+        return null;//retornar null por comentar el throw 
     }
     
     
@@ -45,6 +48,10 @@ public class ConexionBd
                 System.err.println("Error al cerrar la conexion " + e.getMessage());
             }
         }
+    }
+    
+    public static void main(String[] args) {
+        conectarBD();
     }
 
 }

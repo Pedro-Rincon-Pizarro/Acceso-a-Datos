@@ -22,7 +22,7 @@ public class Country {
     private double gnpOld;
     private String localName;
     private String governmentForm;
-    private String headOfState;
+    private String headOfState; 
     private int capital;
     private String code2;
 
@@ -262,11 +262,20 @@ public class Country {
     public String toString() {
         return "Country:\n"
                 + "code: " + code + "\n"
-                + " name=" + name + "\n "
-                + "continent=" + continent + "\n"
-                + " region=" + region + "\n"
-                + " surfaceArea=" + surfaceArea + "\n"
-                + " indepYear=" + indepYear + ", population=" + population + ", lifeExpectancy=" + lifeExpectancy + ", gnp=" + gnp + ", gnpOld=" + gnpOld + ", localName=" + localName + ", governmentForm=" + governmentForm + ", headOfState=" + headOfState + ", capital=" + capital + ", code2=" + code2 + '}';
+                + " name: " + name + "\n "
+                + "continent: " + continent + "\n"
+                + " region: " + region + "\n"
+                + " surfaceArea: " + surfaceArea + "\n"
+                + " indepYear: " + indepYear + "\n"
+                + " population: " + population + "\n"
+                + " lifeExpectancy: " + lifeExpectancy + "\n"
+                + " gnp: " + gnp + "\n"
+                + " gnpOld: " + gnpOld + "\n"
+                + " localName: " + localName + "\n"
+                + " governmentForm: " + governmentForm + "\n"
+                + " headOfState: " + headOfState + "\n"
+                + " capital: " + capital + "\n"
+                + " code2: " + code2 + ".\n";
     }
      
 }
