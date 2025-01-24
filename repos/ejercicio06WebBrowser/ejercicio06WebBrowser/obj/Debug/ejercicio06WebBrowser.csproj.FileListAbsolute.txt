@@ -1,0 +1,10 @@
+C:\Users\pedro.rinpiz\source\repos\ejercicio06WebBrowser\ejercicio06WebBrowser\bin\Debug\ejercicio06WebBrowser.exe.config
+C:\Users\pedro.rinpiz\source\repos\ejercicio06WebBrowser\ejercicio06WebBrowser\bin\Debug\ejercicio06WebBrowser.exe
+C:\Users\pedro.rinpiz\source\repos\ejercicio06WebBrowser\ejercicio06WebBrowser\bin\Debug\ejercicio06WebBrowser.pdb
+C:\Users\pedro.rinpiz\source\repos\ejercicio06WebBrowser\ejercicio06WebBrowser\obj\Debug\ejercicio06WebBrowser.csproj.AssemblyReference.cache
+C:\Users\pedro.rinpiz\source\repos\ejercicio06WebBrowser\ejercicio06WebBrowser\obj\Debug\ejercicio06WebBrowser.Form1.resources
+C:\Users\pedro.rinpiz\source\repos\ejercicio06WebBrowser\ejercicio06WebBrowser\obj\Debug\ejercicio06WebBrowser.Properties.Resources.resources
+C:\Users\pedro.rinpiz\source\repos\ejercicio06WebBrowser\ejercicio06WebBrowser\obj\Debug\ejercicio06WebBrowser.csproj.GenerateResource.cache
+C:\Users\pedro.rinpiz\source\repos\ejercicio06WebBrowser\ejercicio06WebBrowser\obj\Debug\ejercicio06WebBrowser.csproj.CoreCompileInputs.cache
+C:\Users\pedro.rinpiz\source\repos\ejercicio06WebBrowser\ejercicio06WebBrowser\obj\Debug\ejercicio06WebBrowser.exe
+C:\Users\pedro.rinpiz\source\repos\ejercicio06WebBrowser\ejercicio06WebBrowser\obj\Debug\ejercicio06WebBrowser.pdb

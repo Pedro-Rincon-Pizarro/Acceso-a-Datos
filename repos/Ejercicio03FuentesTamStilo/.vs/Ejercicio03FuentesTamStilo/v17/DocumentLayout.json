@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\pedro.rinpiz\\source\\repos\\Ejercicio03FuentesTamStilo\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D70E121B-6548-426F-B2AC-24806DF0165C}|Ejercicio03FuentesTamStilo\\Ejercicio03FuentesTamStilo.csproj|C:\\Users\\pedro.rinpiz\\source\\repos\\Ejercicio03FuentesTamStilo\\ejercicio03fuentestamstilo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D70E121B-6548-426F-B2AC-24806DF0165C}|Ejercicio03FuentesTamStilo\\Ejercicio03FuentesTamStilo.csproj|solutionrelative:ejercicio03fuentestamstilo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D70E121B-6548-426F-B2AC-24806DF0165C}|Ejercicio03FuentesTamStilo\\Ejercicio03FuentesTamStilo.csproj|c:\\users\\pedro.rinpiz\\source\\repos\\ejercicio03fuentestamstilo\\ejercicio03fuentestamstilo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D70E121B-6548-426F-B2AC-24806DF0165C}|Ejercicio03FuentesTamStilo\\Ejercicio03FuentesTamStilo.csproj|solutionrelative:ejercicio03fuentestamstilo\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\pedro.rinpiz\\source\\repos\\Ejercicio03FuentesTamStilo\\Ejercicio03FuentesTamStilo\\Form1.cs",
+              "RelativeDocumentMoniker": "Ejercicio03FuentesTamStilo\\Form1.cs",
+              "ToolTip": "C:\\Users\\pedro.rinpiz\\source\\repos\\Ejercicio03FuentesTamStilo\\Ejercicio03FuentesTamStilo\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Ejercicio03FuentesTamStilo\\Form1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T08:41:37.536Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\pedro.rinpiz\\source\\repos\\Ejercicio03FuentesTamStilo\\Ejercicio03FuentesTamStilo\\Form1.cs",
+              "RelativeDocumentMoniker": "Ejercicio03FuentesTamStilo\\Form1.cs",
+              "ToolTip": "C:\\Users\\pedro.rinpiz\\source\\repos\\Ejercicio03FuentesTamStilo\\Ejercicio03FuentesTamStilo\\Form1.cs",
+              "RelativeToolTip": "Ejercicio03FuentesTamStilo\\Form1.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAgwDwAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-28T08:24:24.071Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

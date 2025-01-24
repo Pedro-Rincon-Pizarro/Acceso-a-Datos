@@ -1,0 +1,10 @@
+C:\Users\pedro.rinpiz\source\repos\ejercicio05VisorImagenes\ejercicio05VisorImagenes\bin\Debug\ejercicio05VisorImagenes.exe.config
+C:\Users\pedro.rinpiz\source\repos\ejercicio05VisorImagenes\ejercicio05VisorImagenes\bin\Debug\ejercicio05VisorImagenes.exe
+C:\Users\pedro.rinpiz\source\repos\ejercicio05VisorImagenes\ejercicio05VisorImagenes\bin\Debug\ejercicio05VisorImagenes.pdb
+C:\Users\pedro.rinpiz\source\repos\ejercicio05VisorImagenes\ejercicio05VisorImagenes\obj\Debug\ejercicio05VisorImagenes.csproj.AssemblyReference.cache
+C:\Users\pedro.rinpiz\source\repos\ejercicio05VisorImagenes\ejercicio05VisorImagenes\obj\Debug\ejercicio05VisorImagenes.Form1.resources
+C:\Users\pedro.rinpiz\source\repos\ejercicio05VisorImagenes\ejercicio05VisorImagenes\obj\Debug\ejercicio05VisorImagenes.Properties.Resources.resources
+C:\Users\pedro.rinpiz\source\repos\ejercicio05VisorImagenes\ejercicio05VisorImagenes\obj\Debug\ejercicio05VisorImagenes.csproj.GenerateResource.cache
+C:\Users\pedro.rinpiz\source\repos\ejercicio05VisorImagenes\ejercicio05VisorImagenes\obj\Debug\ejercicio05VisorImagenes.csproj.CoreCompileInputs.cache
+C:\Users\pedro.rinpiz\source\repos\ejercicio05VisorImagenes\ejercicio05VisorImagenes\obj\Debug\ejercicio05VisorImagenes.exe
+C:\Users\pedro.rinpiz\source\repos\ejercicio05VisorImagenes\ejercicio05VisorImagenes\obj\Debug\ejercicio05VisorImagenes.pdb

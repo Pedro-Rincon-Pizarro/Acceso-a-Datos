@@ -1,0 +1,10 @@
+C:\Users\pedro.rinpiz\source\repos\Loteria\Loteria\obj\Debug\Loteria.csproj.AssemblyReference.cache
+C:\Users\pedro.rinpiz\source\repos\Loteria\Loteria\obj\Debug\Loteria.Primitiva.resources
+C:\Users\pedro.rinpiz\source\repos\Loteria\Loteria\obj\Debug\Loteria.Properties.Resources.resources
+C:\Users\pedro.rinpiz\source\repos\Loteria\Loteria\obj\Debug\Loteria.csproj.GenerateResource.cache
+C:\Users\pedro.rinpiz\source\repos\Loteria\Loteria\obj\Debug\Loteria.csproj.CoreCompileInputs.cache
+C:\Users\pedro.rinpiz\source\repos\Loteria\Loteria\bin\Debug\Loteria.exe.config
+C:\Users\pedro.rinpiz\source\repos\Loteria\Loteria\bin\Debug\Loteria.exe
+C:\Users\pedro.rinpiz\source\repos\Loteria\Loteria\bin\Debug\Loteria.pdb
+C:\Users\pedro.rinpiz\source\repos\Loteria\Loteria\obj\Debug\Loteria.exe
+C:\Users\pedro.rinpiz\source\repos\Loteria\Loteria\obj\Debug\Loteria.pdb

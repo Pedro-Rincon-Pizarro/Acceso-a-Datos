@@ -1,0 +1,11 @@
+C:\Users\pedro.rinpiz\source\repos\09ListBox\09ListBox\bin\Debug\09ListBox.exe.config
+C:\Users\pedro.rinpiz\source\repos\09ListBox\09ListBox\bin\Debug\09ListBox.exe
+C:\Users\pedro.rinpiz\source\repos\09ListBox\09ListBox\bin\Debug\09ListBox.pdb
+C:\Users\pedro.rinpiz\source\repos\09ListBox\09ListBox\obj\Debug\09ListBox.csproj.AssemblyReference.cache
+C:\Users\pedro.rinpiz\source\repos\09ListBox\09ListBox\obj\Debug\_09ListBox.Form1.resources
+C:\Users\pedro.rinpiz\source\repos\09ListBox\09ListBox\obj\Debug\_09ListBox.Form2.resources
+C:\Users\pedro.rinpiz\source\repos\09ListBox\09ListBox\obj\Debug\_09ListBox.Properties.Resources.resources
+C:\Users\pedro.rinpiz\source\repos\09ListBox\09ListBox\obj\Debug\09ListBox.csproj.GenerateResource.cache
+C:\Users\pedro.rinpiz\source\repos\09ListBox\09ListBox\obj\Debug\09ListBox.csproj.CoreCompileInputs.cache
+C:\Users\pedro.rinpiz\source\repos\09ListBox\09ListBox\obj\Debug\09ListBox.exe
+C:\Users\pedro.rinpiz\source\repos\09ListBox\09ListBox\obj\Debug\09ListBox.pdb

@@ -1,0 +1,12 @@
+C:\Users\pedro.rinpiz\source\repos\ej08Menus\ej08Menus\bin\Debug\ej08Menus.exe.config
+C:\Users\pedro.rinpiz\source\repos\ej08Menus\ej08Menus\bin\Debug\ej08Menus.exe
+C:\Users\pedro.rinpiz\source\repos\ej08Menus\ej08Menus\bin\Debug\ej08Menus.pdb
+C:\Users\pedro.rinpiz\source\repos\ej08Menus\ej08Menus\obj\Debug\ej08Menus.csproj.AssemblyReference.cache
+C:\Users\pedro.rinpiz\source\repos\ej08Menus\ej08Menus\obj\Debug\ej08Menus.Form2.resources
+C:\Users\pedro.rinpiz\source\repos\ej08Menus\ej08Menus\obj\Debug\ej08Menus.Form1.resources
+C:\Users\pedro.rinpiz\source\repos\ej08Menus\ej08Menus\obj\Debug\ej08Menus.Properties.Resources.resources
+C:\Users\pedro.rinpiz\source\repos\ej08Menus\ej08Menus\obj\Debug\ej08Menus.csproj.GenerateResource.cache
+C:\Users\pedro.rinpiz\source\repos\ej08Menus\ej08Menus\obj\Debug\ej08Menus.csproj.CoreCompileInputs.cache
+C:\Users\pedro.rinpiz\source\repos\ej08Menus\ej08Menus\obj\Debug\ej08Menus.exe
+C:\Users\pedro.rinpiz\source\repos\ej08Menus\ej08Menus\obj\Debug\ej08Menus.pdb
+C:\Users\pedro.rinpiz\source\repos\ej08Menus\ej08Menus\obj\Debug\ej08Menus.Form3.resources
