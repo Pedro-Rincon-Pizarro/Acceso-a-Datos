@@ -12,178 +12,164 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import modelo.Dlc;
 import modelo.Videojuego;
 
 /**
  *
  * @author Pedro
  */
-public class VideojuegoDao 
-{
-    public List<Videojuego> listarTodosLosVideojuegos()
-    {
+public class VideojuegoDao {
+
+    public List<Videojuego> listarTodosLosVideojuegos() throws ExcepcionesVideojuegos{
         List<Videojuego> videojuegos = new ArrayList<>();
         String query = "SELECT * FROM Videojuegos";
-        try(
-               Connection connection = ConexionBd.conectarBD();
-               PreparedStatement statement = connection.prepareStatement(query);
-               ResultSet resultSet = statement.executeQuery();
-                ){
-            while(resultSet.next())
-            {
-                Videojuego videojuego = new Videojuego(resultSet.getInt("id_videojuego"),  
-                        resultSet.getString("nombre"), 
+        try (
+                Connection connection = ConexionBd.conectarBD(); PreparedStatement statement = connection.prepareStatement(query); ResultSet resultSet = statement.executeQuery();) {
+            while (resultSet.next()) {
+                Videojuego videojuego = new Videojuego(resultSet.getInt("id_videojuego"),
+                        resultSet.getString("nombre"),
                         resultSet.getString("genero"),
                         resultSet.getString("desarrollador"),
-                        resultSet.getDouble("precio"), 
+                        resultSet.getDouble("precio"),
                         resultSet.getDate("fecha_lanzamiento"));
-                
+
                 videojuegos.add(videojuego);
             }
-            
+
         } catch (SQLException e) {
-            int errorCode = e.getErrorCode();
-            switch (errorCode) {
-                case 1045:
-                    System.out.println("Error de autenticación: Verifique usuario y contraseña.");
-                    break;
-                    
-                case 1062:
-                    System.out.println("Error: Valor duplicado en una columna unica.");
-                    break;
-                    
-                case 1049:
-                    System.out.println("Error: Base de datos no encontrada.");
-                    break;
-                default:
-                    System.out.println("Error desconocido " + e.getMessage());
-            }
+            ExcepcionesVideojuegos exVid = manejarExcepcionSQL(e, query);
+            throw exVid;
         }
         return videojuegos;
     }
-    
-    public Videojuego buscarVideojuegoPorNombre(String nombre)
-    {
+
+    public Videojuego buscarVideojuegoPorNombre(String nombre) throws ExcepcionesVideojuegos{
 
         String query = "SELECT * FROM Videojuegos WHERE nombre = ?";
         Videojuego videojuego = null;
-        try(
-               Connection connection = ConexionBd.conectarBD();
-               PreparedStatement statement = connection.prepareStatement(query);
-               ResultSet resultSet = statement.executeQuery();
-                ){
-            while(resultSet.next())
+        try (
+                Connection connection = ConexionBd.conectarBD(); 
+                PreparedStatement statement = connection.prepareStatement(query)) 
+        {       statement.setString(1, "%" + nombre + "%");
+            try(ResultSet resultSet = statement.executeQuery())
             {
-                videojuego = new Videojuego(resultSet.getInt("id_videojuego"),  
-                        resultSet.getString("nombre"), 
+                if (resultSet.next()) {
+                videojuego = new Videojuego(resultSet.getInt("id_videojuego"),
+                        resultSet.getString("nombre"),
                         resultSet.getString("genero"),
                         resultSet.getString("desarrollador"),
-                        resultSet.getDouble("precio"), 
+                        resultSet.getDouble("precio"),
                         resultSet.getDate("fecha_lanzamiento"));
-                
-
+            }
+            } catch (Exception e) {
             }
             
+
         } catch (SQLException e) {
-            int errorCode = e.getErrorCode();
-            switch (errorCode) {
-                case 1045:
-                    System.out.println("Error de autenticación: Verifique usuario y contraseña.");
-                    break;
-                    
-                case 1062:
-                    System.out.println("Error: Valor duplicado en una columna unica.");
-                    break;
-                    
-                case 1049:
-                    System.out.println("Error: Base de datos no encontrada.");
-                    break;
-                default:
-                    System.out.println("Error desconocido " + e.getMessage());
-            }
+            ExcepcionesVideojuegos exVid = manejarExcepcionSQL(e, query);
+            throw exVid;
         }
         return videojuego;
     }
-    
-    public List<Videojuego> ordenarVideojuegosPorFecha()
-    {
+
+    public List<Videojuego> ordenarVideojuegosPorFecha() throws ExcepcionesVideojuegos{
         List<Videojuego> videojuegos = new ArrayList<>();
         String query = "SELECT * FROM Videojuegos ORDER BY fechaLanzamiento";
-        try(
-               Connection connection = ConexionBd.conectarBD();
-               PreparedStatement statement = connection.prepareStatement(query);
-               ResultSet resultSet = statement.executeQuery();
-                ){
-            while(resultSet.next())
-            {
-                Videojuego videojuego = new Videojuego(resultSet.getInt("id_videojuego"),  
-                        resultSet.getString("nombre"), 
+        try (
+                Connection connection = ConexionBd.conectarBD(); PreparedStatement statement = connection.prepareStatement(query); ResultSet resultSet = statement.executeQuery();) {
+            while (resultSet.next()) {
+                Videojuego videojuego = new Videojuego(resultSet.getInt("id_videojuego"),
+                        resultSet.getString("nombre"),
                         resultSet.getString("genero"),
                         resultSet.getString("desarrollador"),
-                        resultSet.getDouble("precio"), 
+                        resultSet.getDouble("precio"),
                         resultSet.getDate("fecha_lanzamiento"));
-                
+
                 videojuegos.add(videojuego);
             }
-            
+
         } catch (SQLException e) {
-            int errorCode = e.getErrorCode();
-            switch (errorCode) {
-                case 1045:
-                    System.out.println("Error de autenticación: Verifique usuario y contraseña.");
-                    break;
-                    
-                case 1062:
-                    System.out.println("Error: Valor duplicado en una columna unica.");
-                    break;
-                    
-                case 1049:
-                    System.out.println("Error: Base de datos no encontrada.");
-                    break;
-                default:
-                    System.out.println("Error desconocido " + e.getMessage());
-            }
+            ExcepcionesVideojuegos exVid = manejarExcepcionSQL(e, query);
+            throw exVid;
         }
         return videojuegos;
     }
-    
-    public Videojuego crearNuevoVideojuego(Videojuego nuevoVideojuego)
-    {
+
+    public Videojuego crearNuevoVideojuego(Videojuego nuevoVideojuego) throws ExcepcionesVideojuegos{
         String query = "INSERT INTO videojuegos (nombre, genero, desarrollador, precio, fecha_lanzamiento) Values(?,?,?,?,?)";
-        try(
-               Connection connection = ConexionBd.conectarBD();
-               PreparedStatement statement = connection.prepareStatement(query);
-               ResultSet resultSet = statement.executeQuery();
-                )
-        {
+        try (
+                Connection connection = ConexionBd.conectarBD(); PreparedStatement statement = connection.prepareStatement(query); ResultSet resultSet = statement.executeQuery();) {
             statement.setString(1, nuevoVideojuego.getNombre());
             statement.setString(2, nuevoVideojuego.getGenero());
             statement.setString(3, nuevoVideojuego.getDesarrollador());
             statement.setDouble(4, nuevoVideojuego.getPrecio());
             statement.setDate(5, (Date) nuevoVideojuego.getFecha_lanzamiento());
             statement.executeUpdate();
-        } 
-        catch (SQLException e) 
-        {
-            int errorCode = e.getErrorCode();
-            switch (errorCode) 
-            {
-                case 1045:
-                    System.out.println("Error de autenticación: Verifique usuario y contraseña.");
-                    break;
-                    
-                case 1062:
-                    System.out.println("Error: Valor duplicado en una columna unica.");
-                    break;
-                    
-                case 1049:
-                    System.out.println("Error: Base de datos no encontrada.");
-                    break;
-                default:
-                    System.out.println("Error desconocido " + e.getMessage());
-            }
+        } catch (SQLException e) {
+            ExcepcionesVideojuegos exVid = manejarExcepcionSQL(e, query);
+            throw exVid;
         }
         return nuevoVideojuego;
+    }
+
+    public void actualizarVideojuego(Videojuego videojuegoModificar) throws ExcepcionesVideojuegos{
+        String query = "UPDATE Videojuegos SET nombre = ?, genero = ?, desarrollador = ?, precio = ?, fechaLanzamiento = ?"
+                + "WHERE idVideojuego = ?";
+        try (Connection connection = ConexionBd.conectarBD(); PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setString(1, videojuegoModificar.getNombre());
+            statement.setString(2, videojuegoModificar.getGenero());
+            statement.setString(3, videojuegoModificar.getDesarrollador());
+            statement.setDouble(4, videojuegoModificar.getPrecio());
+            statement.setDate(5, (Date) videojuegoModificar.getFecha_lanzamiento());
+            statement.setInt(6, videojuegoModificar.getId_videojuego());
+            statement.executeUpdate();
+            System.out.println("Videojuego actualizado correctamente");
+        } catch (SQLException e) {
+            ExcepcionesVideojuegos exVid = manejarExcepcionSQL(e, query);
+            throw exVid;
+        }
+    }
+
+    public void borrarVideojuego(int id) throws ExcepcionesVideojuegos{
+        String query = "DELETE FROM Videojuegos WHERE idVideojuego = ?";
+        try (Connection connection = ConexionBd.conectarBD(); PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setInt(1, id);
+            int filaBorrada = statement.executeUpdate();
+
+            if (filaBorrada > 0) {
+                System.out.println("Videojuego eliminado correctamente");
+            } else {
+                System.out.println("Videojuego no encontrado");
+            }
+        } catch (SQLException e) {
+            ExcepcionesVideojuegos exVid = manejarExcepcionSQL(e, query);
+            throw exVid;
+        }
+
+    }
+    
+    private ExcepcionesVideojuegos manejarExcepcionSQL(SQLException e, String query) {
+        ExcepcionesVideojuegos exVid = new ExcepcionesVideojuegos();
+        exVid.setCodigoError(e.getErrorCode());
+        exVid.setMensajeAdministrador(e.getMessage());
+        exVid.setMensajeUsuario(e.getMessage());
+        exVid.setSentenciaSQL(query);
+        switch (e.getErrorCode()) {
+            case 1045:
+                exVid.setMensajeUsuario("Error de autenticación: Verifique usuario y contraseña.");
+                break;
+
+            case 1062:
+                exVid.setMensajeUsuario("Error: Valor duplicado en una columna única.");
+                break;
+
+            case 1049:
+                exVid.setMensajeUsuario("Error: Base de datos no encontrada.");
+                break;
+
+            default:
+                exVid.setMensajeUsuario("Error desconocido: " + e.getMessage());
+        }
+        return exVid;
     }
 }

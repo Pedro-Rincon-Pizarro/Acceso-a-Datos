@@ -214,7 +214,6 @@ public class FrmMultiChatUDP extends javax.swing.JFrame {
             e.printStackTrace();
         }
     }
-    
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
