@@ -25,7 +25,9 @@ public class PlataformaDao {
         List<Plataforma> plataformas = new ArrayList<>();
         String query = "SELECT * FROM Plataforma";
         try (
-                Connection connection = ConexionBd.conectarBD(); PreparedStatement statement = connection.prepareStatement(query); ResultSet resultSet = statement.executeQuery()) {
+                Connection connection = ConexionBd.conectarBD(); 
+                PreparedStatement statement = connection.prepareStatement(query); 
+                ResultSet resultSet = statement.executeQuery()) {
 
             while (resultSet.next()) {
                 Plataforma plataforma = new Plataforma(

@@ -13,19 +13,19 @@ import java.util.Date;
 public class Videojuego 
 {
     private int id_videojuego;
+    private int id_plataforma;
     private String nombre;
     private String genero;
-    private String desarrollador;
     private double precio;
     private Date fecha_lanzamiento;
 
-    public Videojuego(int id_videojuego, String nombre, String generoo, String desarrollador, double precio, Date fechaLanzamiento) {
+    public Videojuego(int id_videojuego, int id_plataforma, String nombre, String genero, double precio, Date fecha_lanzamiento) {
         this.id_videojuego = id_videojuego;
+        this.id_plataforma = id_plataforma;
         this.nombre = nombre;
-        this.genero = generoo;
-        this.desarrollador = desarrollador;
+        this.genero = genero;
         this.precio = precio;
-        this.fecha_lanzamiento = fechaLanzamiento;
+        this.fecha_lanzamiento = fecha_lanzamiento;
     }
 
     public int getId_videojuego() {
@@ -34,6 +34,14 @@ public class Videojuego
 
     public void setId_videojuego(int id_videojuego) {
         this.id_videojuego = id_videojuego;
+    }
+
+    public int getId_plataforma() {
+        return id_plataforma;
+    }
+
+    public void setId_plataforma(int id_plataforma) {
+        this.id_plataforma = id_plataforma;
     }
 
     public String getNombre() {
@@ -48,16 +56,8 @@ public class Videojuego
         return genero;
     }
 
-    public void setGenero(String generoo) {
-        this.genero = generoo;
-    }
-
-    public String getDesarrollador() {
-        return desarrollador;
-    }
-
-    public void setDesarrollador(String desarrollador) {
-        this.desarrollador = desarrollador;
+    public void setGenero(String genero) {
+        this.genero = genero;
     }
 
     public double getPrecio() {
@@ -72,9 +72,9 @@ public class Videojuego
         return fecha_lanzamiento;
     }
 
-    public void setFecha_lanzamiento(Date fechaLanzamiento) {
-        this.fecha_lanzamiento = fechaLanzamiento;
+    public void setFecha_lanzamiento(Date fecha_lanzamiento) {
+        this.fecha_lanzamiento = fecha_lanzamiento;
     }
-    
+
     
 }

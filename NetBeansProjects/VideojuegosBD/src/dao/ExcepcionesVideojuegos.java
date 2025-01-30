@@ -18,11 +18,13 @@ public class ExcepcionesVideojuegos extends Exception
     public ExcepcionesVideojuegos() {
     }
 
-    public String getMensajeUsuario() {
+    public String getMensajeUsuario() 
+    {
         return mensajeUsuario;
     }
 
-    public void setMensajeUsuario(String mensajeUsuario) {
+    public void setMensajeUsuario(String mensajeUsuario) 
+    {
         this.mensajeUsuario = mensajeUsuario;
     }
 
@@ -30,7 +32,8 @@ public class ExcepcionesVideojuegos extends Exception
         return mensajeAdministrador;
     }
 
-    public void setMensajeAdministrador(String mensajeAdministrador) {
+    public void setMensajeAdministrador(String mensajeAdministrador) 
+    {
         this.mensajeAdministrador = mensajeAdministrador;
     }
 

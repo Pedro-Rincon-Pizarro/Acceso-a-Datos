@@ -10,7 +10,7 @@ import java.util.Date;
  *
  * @author Pedro
  */
-public class Dlc 
+public class Dlc
 {
     private int id_dlc;
     private int id_videojuego;

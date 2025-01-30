@@ -165,6 +165,7 @@ public class DlcDao {
             default:
                 exVid.setMensajeUsuario("Error desconocido: " + e.getMessage());
         }
+        
         return exVid;
     }
 }

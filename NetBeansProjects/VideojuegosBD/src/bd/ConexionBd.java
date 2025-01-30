@@ -16,7 +16,7 @@ public class ConexionBd
 {
     private static final String USER = "root";
     private static final String PWD = "";
-    private static final String URL = "jdbc:MySQL://localhost/videojuegosdlcs";
+    private static final String URL = "jdbc:MySQL://localhost/juegosdlcs";
     
     public static Connection conectarBD()
     {
