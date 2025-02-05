@@ -13,6 +13,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 import modelo.Plataforma;
+import modelo.Videojuego;
 
 /**
  *
@@ -23,7 +24,7 @@ public class PlataformaDao {
 
     public List<Plataforma> listarTodasPlataformas() throws ExcepcionesVideojuegos {
         List<Plataforma> plataformas = new ArrayList<>();
-        String query = "SELECT * FROM Plataforma";
+        String query = "SELECT * FROM Plataformas";
         try (
                 Connection connection = ConexionBd.conectarBD(); 
                 PreparedStatement statement = connection.prepareStatement(query); 
@@ -31,14 +32,15 @@ public class PlataformaDao {
 
             while (resultSet.next()) {
                 Plataforma plataforma = new Plataforma(
-                        resultSet.getInt("idPlataforma"),
+                        resultSet.getInt("id_plataforma"),
                         resultSet.getString("nombre"),
-                        resultSet.getDate("fechaFundacion"));
+                        resultSet.getDate("fecha_fundacion"));
                 plataformas.add(plataforma);
             }
 
         } catch (SQLException e) {
             ExcepcionesVideojuegos exVid = manejarExcepcionSQL(e, query);
+            e.printStackTrace();
             throw exVid;
         }
         return plataformas;
@@ -46,15 +48,17 @@ public class PlataformaDao {
 
     public List<Plataforma> listarPlataformasPorFecha() throws ExcepcionesVideojuegos {
         List<Plataforma> plataformas = new ArrayList<>();
-        String query = "SELECT * FROM Plataforma ORDER BY fechaFundacion";
+        String query = "SELECT * FROM Plataformas ORDER BY fecha_fundacion";
         try (
-                Connection connection = ConexionBd.conectarBD(); PreparedStatement statement = connection.prepareStatement(query); ResultSet resultSet = statement.executeQuery()) {
+                Connection connection = ConexionBd.conectarBD(); 
+                PreparedStatement statement = connection.prepareStatement(query); 
+                ResultSet resultSet = statement.executeQuery()) {
 
             while (resultSet.next()) {
                 Plataforma plataforma = new Plataforma(
-                        resultSet.getInt("idPlataforma"),
+                        resultSet.getInt("id_plataforma"),
                         resultSet.getString("nombre"),
-                        resultSet.getDate("fechaFundacion"));
+                        resultSet.getDate("fecha_fundacion"));
                 plataformas.add(plataforma);
             }
 
@@ -65,19 +69,21 @@ public class PlataformaDao {
         return plataformas;
     }
 
-    public Plataforma buscarPlataformaPorNombre(String nombre) throws ExcepcionesVideojuegos {
-        String query = "SELECT * FROM Plataforma WHERE nombre LIKE ?";
+    public List<Plataforma> buscarPlataformaPorNombre(String nombre) throws ExcepcionesVideojuegos {
+        String query = "SELECT * FROM Plataformas WHERE nombre LIKE ?";
         Plataforma plataforma = null;
+        List<Plataforma> plataformas = new ArrayList<>();
         try (
                 Connection connection = ConexionBd.conectarBD(); PreparedStatement statement = connection.prepareStatement(query)) {
 
             statement.setString(1, "%" + nombre + "%");
             try (ResultSet resultSet = statement.executeQuery()) {
-                if (resultSet.next()) {
+                while(resultSet.next()) {
                     plataforma = new Plataforma(
-                            resultSet.getInt("idPlataforma"),
+                            resultSet.getInt("id_plataforma"),
                             resultSet.getString("nombre"),
-                            resultSet.getDate("fechaFundacion"));
+                            resultSet.getDate("fecha_fundacion"));
+                    plataformas.add(plataforma);
                 }
             }
 
@@ -85,11 +91,42 @@ public class PlataformaDao {
             ExcepcionesVideojuegos exVid = manejarExcepcionSQL(e, query);
             throw exVid;
         }
-        return plataforma;
+        return plataformas;
+    }
+    
+    public List<Videojuego> listarVideojuegosPorPlataforma(int idPlat) throws ExcepcionesVideojuegos
+    {
+        String query = "SELECT * FROM Videojuegos WHERE id_plataforma = ?";
+        List<Videojuego> videojuegosPlataforma = new ArrayList<Videojuego>();
+        Videojuego videojuego = null;
+        
+        try (
+                Connection connection = ConexionBd.conectarBD(); 
+                PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setInt(1, idPlat);
+            try (ResultSet resultSet = statement.executeQuery()) {
+                while (resultSet.next()) {
+                    videojuego = new Videojuego(resultSet.getInt("id_videojuego"),
+                            resultSet.getInt("id_plataforma"),
+                            resultSet.getString("nombre"),
+                            resultSet.getString("genero"),
+                            resultSet.getDouble("precio"),
+                            resultSet.getDate("fecha_lanzamiento"));
+                    videojuegosPlataforma.add(videojuego);
+                }
+            }
+
+        } catch (SQLException e) {
+            ExcepcionesVideojuegos exVid = manejarExcepcionSQL(e, query);
+            e.printStackTrace();
+            throw exVid;
+        }
+        
+        return videojuegosPlataforma;
     }
 
     public Plataforma crearNuevaPlataforma(Plataforma nuevaPlataforma) throws ExcepcionesVideojuegos {
-        String query = "INSERT INTO Plataforma (nombre, fechaFundacion) VALUES (?, ?)";
+        String query = "INSERT INTO Plataformas (nombre, fecha_fundacion) VALUES (?, ?)";
         try (
                 Connection connection = ConexionBd.conectarBD(); PreparedStatement statement = connection.prepareStatement(query)) {
 
@@ -105,7 +142,7 @@ public class PlataformaDao {
     }
 
     public boolean actualizarPlataforma(Plataforma plataformaModificar) throws ExcepcionesVideojuegos {
-        String query = "UPDATE Plataforma SET nombre = ?, fechaFundacion = ? WHERE idPlataforma = ?";
+        String query = "UPDATE Plataformas SET nombre = ?, fecha_fundacion = ? WHERE id_plataforma = ?";
         try (
                 Connection connection = ConexionBd.conectarBD(); PreparedStatement statement = connection.prepareStatement(query)) {
 
@@ -123,7 +160,7 @@ public class PlataformaDao {
     }
 
     public void borrarPlataforma(int id) throws ExcepcionesVideojuegos {
-        String query = "DELETE FROM Plataforma WHERE idPlataforma = ?";
+        String query = "DELETE FROM Plataformas WHERE id_plataforma = ?";
         try (
                 Connection connection = ConexionBd.conectarBD(); PreparedStatement statement = connection.prepareStatement(query)) {
 

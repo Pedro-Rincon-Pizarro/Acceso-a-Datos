@@ -7,6 +7,7 @@ package dao;
 import bd.ConexionBd;
 import java.sql.Connection;
 import java.sql.Date;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -97,42 +98,49 @@ public class VideojuegoDao {
         return videojuegos;
     }
 
-    public Videojuego crearNuevoVideojuego(Videojuego nuevoVideojuego) throws ExcepcionesVideojuegos{
+    public void crearNuevoVideojuego(Videojuego nuevoVideojuego) throws ExcepcionesVideojuegos{
         String query = "INSERT INTO videojuegos (id_plataforma, nombre, genero, precio, fecha_lanzamiento) Values(?,?,?,?,?)";
         try (
-                Connection connection = ConexionBd.conectarBD(); PreparedStatement statement = connection.prepareStatement(query); ResultSet resultSet = statement.executeQuery();) {
+                Connection connection = ConexionBd.conectarBD();
+                PreparedStatement statement = connection.prepareStatement(query); 
+                ) {
             statement.setInt(1, nuevoVideojuego.getId_plataforma());
             statement.setString(2, nuevoVideojuego.getNombre());
             statement.setString(3, nuevoVideojuego.getGenero());
             statement.setDouble(4, nuevoVideojuego.getPrecio());
-            statement.setDate(5, (Date) nuevoVideojuego.getFecha_lanzamiento());
+            statement.setDate(5, new java.sql.Date(nuevoVideojuego.getFecha_lanzamiento().getTime()));
             statement.executeUpdate();
         } catch (SQLException e) {
             ExcepcionesVideojuegos exVid = manejarExcepcionSQL(e, query);
+            e.printStackTrace();
             throw exVid;
         }
-        return nuevoVideojuego;
+        
     }
 
     public void actualizarVideojuego(Videojuego videojuegoModificar) throws ExcepcionesVideojuegos{
         String query = "UPDATE Videojuegos SET id_plataforma = ?, nombre = ?, genero = ?, precio = ?, fecha_lanzamiento = ?"
-                + "WHERE idVideojuego = ?";
-        try (Connection connection = ConexionBd.conectarBD(); PreparedStatement statement = connection.prepareStatement(query)) {
+                + "WHERE id_videojuego = ?";
+        try (Connection connection = ConexionBd.conectarBD(); 
+                PreparedStatement statement = connection.prepareStatement(query)) {
+            
             statement.setInt(1, videojuegoModificar.getId_plataforma());
             statement.setString(2, videojuegoModificar.getNombre());
             statement.setString(3, videojuegoModificar.getGenero());
             statement.setDouble(4, videojuegoModificar.getPrecio());
-            statement.setDate(5, (Date) videojuegoModificar.getFecha_lanzamiento());
+            statement.setDate(5, new java.sql.Date(videojuegoModificar.getFecha_lanzamiento().getTime()));
+            statement.setInt(6, videojuegoModificar.getId_videojuego());
             statement.executeUpdate();
             System.out.println("Videojuego actualizado correctamente");
         } catch (SQLException e) {
             ExcepcionesVideojuegos exVid = manejarExcepcionSQL(e, query);
+            e.printStackTrace();
             throw exVid;
         }
     }
 
     public void borrarVideojuego(int id) throws ExcepcionesVideojuegos{
-        String query = "DELETE FROM Videojuegos WHERE idVideojuego = ?";
+        String query = "DELETE FROM Videojuegos WHERE id_videojuego = ?";
         try (Connection connection = ConexionBd.conectarBD(); PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setInt(1, id);
             int filaBorrada = statement.executeUpdate();
@@ -144,6 +152,7 @@ public class VideojuegoDao {
             }
         } catch (SQLException e) {
             ExcepcionesVideojuegos exVid = manejarExcepcionSQL(e, query);
+            e.printStackTrace();
             throw exVid;
         }
 
