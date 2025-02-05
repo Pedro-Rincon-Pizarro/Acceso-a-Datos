@@ -1,0 +1,272 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{04A34F68-83B9-48A6-A143-71FDDAB9F75B}|CrudProyectos\\CrudProyectos.csproj|C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\crudproyectos\\conexionbd\\conexionbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04A34F68-83B9-48A6-A143-71FDDAB9F75B}|CrudProyectos\\CrudProyectos.csproj|solutionrelative:crudproyectos\\conexionbd\\conexionbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04A34F68-83B9-48A6-A143-71FDDAB9F75B}|CrudProyectos\\CrudProyectos.csproj|C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\crudproyectos\\excepcion\\excepcionproyectos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04A34F68-83B9-48A6-A143-71FDDAB9F75B}|CrudProyectos\\CrudProyectos.csproj|solutionrelative:crudproyectos\\excepcion\\excepcionproyectos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04A34F68-83B9-48A6-A143-71FDDAB9F75B}|CrudProyectos\\CrudProyectos.csproj|C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\crudproyectos\\dao\\proyectodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04A34F68-83B9-48A6-A143-71FDDAB9F75B}|CrudProyectos\\CrudProyectos.csproj|solutionrelative:crudproyectos\\dao\\proyectodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04A34F68-83B9-48A6-A143-71FDDAB9F75B}|CrudProyectos\\CrudProyectos.csproj|C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\crudproyectos\\modelo\\commun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04A34F68-83B9-48A6-A143-71FDDAB9F75B}|CrudProyectos\\CrudProyectos.csproj|solutionrelative:crudproyectos\\modelo\\commun.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04A34F68-83B9-48A6-A143-71FDDAB9F75B}|CrudProyectos\\CrudProyectos.csproj|C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\crudproyectos\\dgvdiseno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04A34F68-83B9-48A6-A143-71FDDAB9F75B}|CrudProyectos\\CrudProyectos.csproj|solutionrelative:crudproyectos\\dgvdiseno.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04A34F68-83B9-48A6-A143-71FDDAB9F75B}|CrudProyectos\\CrudProyectos.csproj|c:\\users\\pedro.rinpiz\\source\\repos\\crudproyectos\\crudproyectos\\crudproyectos\\visual\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04A34F68-83B9-48A6-A143-71FDDAB9F75B}|CrudProyectos\\CrudProyectos.csproj|solutionrelative:crudproyectos\\visual\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04A34F68-83B9-48A6-A143-71FDDAB9F75B}|CrudProyectos\\CrudProyectos.csproj|C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\crudproyectos\\modelo\\proyecto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04A34F68-83B9-48A6-A143-71FDDAB9F75B}|CrudProyectos\\CrudProyectos.csproj|solutionrelative:crudproyectos\\modelo\\proyecto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04A34F68-83B9-48A6-A143-71FDDAB9F75B}|CrudProyectos\\CrudProyectos.csproj|C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\crudproyectos\\visual\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{04A34F68-83B9-48A6-A143-71FDDAB9F75B}|CrudProyectos\\CrudProyectos.csproj|solutionrelative:crudproyectos\\visual\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04A34F68-83B9-48A6-A143-71FDDAB9F75B}|CrudProyectos\\CrudProyectos.csproj|C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\crudproyectos\\visual\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04A34F68-83B9-48A6-A143-71FDDAB9F75B}|CrudProyectos\\CrudProyectos.csproj|solutionrelative:crudproyectos\\visual\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04A34F68-83B9-48A6-A143-71FDDAB9F75B}|CrudProyectos\\CrudProyectos.csproj|C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\crudproyectos\\visual\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{04A34F68-83B9-48A6-A143-71FDDAB9F75B}|CrudProyectos\\CrudProyectos.csproj|solutionrelative:crudproyectos\\visual\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04A34F68-83B9-48A6-A143-71FDDAB9F75B}|CrudProyectos\\CrudProyectos.csproj|C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\crudproyectos\\visual\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04A34F68-83B9-48A6-A143-71FDDAB9F75B}|CrudProyectos\\CrudProyectos.csproj|solutionrelative:crudproyectos\\visual\\form1.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 279,
+          "SelectedChildIndex": 19,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\CrudProyectos\\Visual\\Form1.cs",
+              "RelativeDocumentMoniker": "CrudProyectos\\Visual\\Form1.cs",
+              "ToolTip": "C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\CrudProyectos\\Visual\\Form1.cs",
+              "RelativeToolTip": "CrudProyectos\\Visual\\Form1.cs",
+              "ViewState": "AgIAAK0AAAAAAAAAAAAAALgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T15:00:30.272Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{ca8cc5c7-0231-406a-95cd-aa5ed6ac0190}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ProyectoDao.cs",
+              "DocumentMoniker": "C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\CrudProyectos\\Dao\\ProyectoDao.cs",
+              "RelativeDocumentMoniker": "CrudProyectos\\Dao\\ProyectoDao.cs",
+              "ToolTip": "C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\CrudProyectos\\Dao\\ProyectoDao.cs",
+              "RelativeToolTip": "CrudProyectos\\Dao\\ProyectoDao.cs",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAQwJQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T11:30:58.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\CrudProyectos\\Visual\\Form2.cs",
+              "RelativeDocumentMoniker": "CrudProyectos\\Visual\\Form2.cs",
+              "ToolTip": "C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\CrudProyectos\\Visual\\Form2.cs",
+              "RelativeToolTip": "CrudProyectos\\Visual\\Form2.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAABMAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T13:08:25.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Form2.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\CrudProyectos\\Visual\\Form2.cs",
+              "RelativeDocumentMoniker": "CrudProyectos\\Visual\\Form2.cs",
+              "ToolTip": "C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\CrudProyectos\\Visual\\Form2.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CrudProyectos\\Visual\\Form2.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T16:24:09.244Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\CrudProyectos\\Visual\\Form1.cs",
+              "RelativeDocumentMoniker": "CrudProyectos\\Visual\\Form1.cs",
+              "ToolTip": "C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\CrudProyectos\\Visual\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CrudProyectos\\Visual\\Form1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-21T15:53:34.847Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ConexionBD.cs",
+              "DocumentMoniker": "C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\CrudProyectos\\ConexionBd\\ConexionBD.cs",
+              "RelativeDocumentMoniker": "CrudProyectos\\ConexionBd\\ConexionBD.cs",
+              "ToolTip": "C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\CrudProyectos\\ConexionBd\\ConexionBD.cs",
+              "RelativeToolTip": "CrudProyectos\\ConexionBd\\ConexionBD.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T11:31:25.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DGVDiseno.cs",
+              "DocumentMoniker": "C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\CrudProyectos\\DGVDiseno.cs",
+              "RelativeDocumentMoniker": "CrudProyectos\\DGVDiseno.cs",
+              "ToolTip": "C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\CrudProyectos\\DGVDiseno.cs",
+              "RelativeToolTip": "CrudProyectos\\DGVDiseno.cs",
+              "ViewState": "AgIAAGMAAAAAAAAAAAAAAHsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T11:33:22.156Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Form1.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\CrudProyectos\\Visual\\Form1.Designer.cs",
+              "RelativeDocumentMoniker": "CrudProyectos\\Visual\\Form1.Designer.cs",
+              "ToolTip": "C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\CrudProyectos\\Visual\\Form1.Designer.cs",
+              "RelativeToolTip": "CrudProyectos\\Visual\\Form1.Designer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T15:01:32.358Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Proyecto.cs",
+              "DocumentMoniker": "C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\CrudProyectos\\MODELO\\Proyecto.cs",
+              "RelativeDocumentMoniker": "CrudProyectos\\MODELO\\Proyecto.cs",
+              "ToolTip": "C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\CrudProyectos\\MODELO\\Proyecto.cs",
+              "RelativeToolTip": "CrudProyectos\\MODELO\\Proyecto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-20T14:54:39.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ExcepcionProyectos.cs",
+              "DocumentMoniker": "C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\CrudProyectos\\Excepcion\\ExcepcionProyectos.cs",
+              "RelativeDocumentMoniker": "CrudProyectos\\Excepcion\\ExcepcionProyectos.cs",
+              "ToolTip": "C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\CrudProyectos\\Excepcion\\ExcepcionProyectos.cs",
+              "RelativeToolTip": "CrudProyectos\\Excepcion\\ExcepcionProyectos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T12:06:40.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Commun.cs",
+              "DocumentMoniker": "C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\CrudProyectos\\MODELO\\Commun.cs",
+              "RelativeDocumentMoniker": "CrudProyectos\\MODELO\\Commun.cs",
+              "ToolTip": "C:\\Users\\pedro.rinpiz\\source\\repos\\CrudProyectos\\CrudProyectos\\CrudProyectos\\MODELO\\Commun.cs",
+              "RelativeToolTip": "CrudProyectos\\MODELO\\Commun.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-26T12:46:20.106Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 121,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
