@@ -136,6 +136,7 @@ public class PlataformaDao {
 
         } catch (SQLException e) {
             ExcepcionesVideojuegos exVid = manejarExcepcionSQL(e, query);
+            e.printStackTrace();
             throw exVid;
         }
         return nuevaPlataforma;

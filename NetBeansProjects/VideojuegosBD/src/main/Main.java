@@ -4,13 +4,12 @@
  */
 package main;
 
-
 import dao.DlcDao;
 import dao.ExcepcionesVideojuegos;
 import dao.PlataformaDao;
 import dao.VideojuegoDao;
 import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 import java.util.Scanner;
 import modelo.Dlc;
@@ -25,6 +24,7 @@ public class Main {
 
     static int eleccion = -1;
     static Scanner sc = new Scanner(System.in);
+    static SimpleDateFormat dateFormat = null;
 
     public static void main(String[] args) throws ExcepcionesVideojuegos {
         do {
@@ -32,8 +32,7 @@ public class Main {
         } while (eleccion != 0);
     }
 
-    public static void menu() throws ExcepcionesVideojuegos 
-    {
+    public static void menu() throws ExcepcionesVideojuegos {
         System.out.println("----MENU INICIO----");
         System.out.println("1.-Menú Videojuegos:");
         System.out.println("2.-Menú Dlcs:");
@@ -41,45 +40,40 @@ public class Main {
         System.out.println("0.-Salir.");
         eleccion = sc.nextInt();
 
-        switch (eleccion)
-        {
+        switch (eleccion) {
             case 0:
                 System.out.println("Saliendo del programa");
                 System.exit(0);
                 break;
 
             case 1:
-                do 
-                {
+                do {
                     menuVideojuegos();
                 } while (eleccion != 0);
                 eleccion = 1;
                 break;
 
             case 2:
-                do 
-                {
+                do {
                     menuDlcs();
                 } while (eleccion != 0);
                 eleccion = 2;
                 break;
 
             case 3:
-                do 
-                {
+                do {
                     menuPlataformas();
                 } while (eleccion != 0);
                 eleccion = 3;
                 break;
-                
+
             default:
                 System.out.println("¡¡¡EROR!!!Elige una opción válida");
                 throw new AssertionError();
         }
     }
 
-    public static void menuVideojuegos() throws ExcepcionesVideojuegos
-    {
+    public static void menuVideojuegos() throws ExcepcionesVideojuegos {
         VideojuegoDao videojuegoDao = new VideojuegoDao();
         System.out.println("----MENU VIDEOJUEGOS----");
         System.out.println("1.-Listar todos los Videojuegos:");
@@ -91,8 +85,7 @@ public class Main {
         System.out.println("0.-Volver a menú Principal.");
         eleccion = sc.nextInt();
 
-        switch (eleccion) 
-        {
+        switch (eleccion) {
             case 0:
                 System.out.println("Volviendo al Menú principal");
                 break;
@@ -100,16 +93,15 @@ public class Main {
             case 1:
                 try {
                     System.out.println("Lista de videojuegos:");
-                List<Videojuego> videojuegos = videojuegoDao.listarTodosLosVideojuegos();
-                for (Videojuego videojuego : videojuegos) 
-                {
-                    System.out.println("ID Videojuego: " + videojuego.getId_videojuego()
-                            + "\nid_plataforma: " + videojuego.getId_plataforma()
-                            + "\nNombre: " + videojuego.getNombre()
-                            + "\nGenero: " + videojuego.getGenero()
-                            + "\nPrecio: " + videojuego.getPrecio()
-                            + "\nFecha de lanzamiento: " + videojuego.getFecha_lanzamiento());
-                }
+                    List<Videojuego> videojuegos = videojuegoDao.listarTodosLosVideojuegos();
+                    for (Videojuego videojuego : videojuegos) {
+                        System.out.println("ID Videojuego: " + videojuego.getId_videojuego()
+                                + "\nid_plataforma: " + videojuego.getId_plataforma()
+                                + "\nNombre: " + videojuego.getNombre()
+                                + "\nGenero: " + videojuego.getGenero()
+                                + "\nPrecio: " + videojuego.getPrecio()
+                                + "\nFecha de lanzamiento: " + videojuego.getFecha_lanzamiento());
+                    }
                 } catch (ExcepcionesVideojuegos e) {
                     System.err.println(e.getMensajeUsuario());
                 }
@@ -118,16 +110,15 @@ public class Main {
             case 2:
                 try {
                     System.out.println("Lista de videojuegos por fecha de lanzamiento:");
-                List<Videojuego> videojuegosPorFecha = videojuegoDao.ordenarVideojuegosPorFecha();
-                for (Videojuego videojuego : videojuegosPorFecha) 
-                {
-                    System.out.println("ID Videojuego: " + videojuego.getId_videojuego()
-                            + "\nid_plataforma: " + videojuego.getId_plataforma()
-                            + "\nNombre: " + videojuego.getNombre()
-                            + "\nGenero: " + videojuego.getGenero()
-                            + "\nPrecio: " + videojuego.getPrecio()
-                            + "\nFecha de lanzamiento: " + videojuego.getFecha_lanzamiento());
-                }
+                    List<Videojuego> videojuegosPorFecha = videojuegoDao.ordenarVideojuegosPorFecha();
+                    for (Videojuego videojuego : videojuegosPorFecha) {
+                        System.out.println("ID Videojuego: " + videojuego.getId_videojuego()
+                                + "\nid_plataforma: " + videojuego.getId_plataforma()
+                                + "\nNombre: " + videojuego.getNombre()
+                                + "\nGenero: " + videojuego.getGenero()
+                                + "\nPrecio: " + videojuego.getPrecio()
+                                + "\nFecha de lanzamiento: " + videojuego.getFecha_lanzamiento());
+                    }
                 } catch (ExcepcionesVideojuegos e) {
                     System.err.println(e.getMensajeUsuario());
                 }
@@ -137,18 +128,15 @@ public class Main {
                 try {
                     System.out.println("Introduce el nombre del juego buscado");
                     List<Videojuego> juegosBuscados = videojuegoDao.buscarVideojuegoPorNombre(sc.next());
-                    for(Videojuego v : juegosBuscados)
-                    {
-                         System.out.println("ID Videojuego: " + v.getId_videojuego()
-                        + "\nid_plataforma: " + v.getId_plataforma()
-                            + "\nNombre: " + v.getNombre()
-                            + "\nGenero: " + v.getGenero()
-                            + "\nPrecio: " + v.getPrecio()
-                            + "\nFecha de lanzamiento: " + v.getFecha_lanzamiento());
+                    for (Videojuego v : juegosBuscados) {
+                        System.out.println("ID Videojuego: " + v.getId_videojuego()
+                                + "\nid_plataforma: " + v.getId_plataforma()
+                                + "\nNombre: " + v.getNombre()
+                                + "\nGenero: " + v.getGenero()
+                                + "\nPrecio: " + v.getPrecio()
+                                + "\nFecha de lanzamiento: " + v.getFecha_lanzamiento());
                     }
-                
 
-               
                 } catch (ExcepcionesVideojuegos e) {
                     System.err.println(e.getMensajeUsuario());
                 }
@@ -170,13 +158,10 @@ public class Main {
 
                 // Crear un SimpleDateFormat para el formato de fecha esperado
                 SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-                try 
-                {
+                try {
                     // Intentar convertir el String en un objeto Date
-                    fechaLanzamiento = dateFormat.parse(input);
-                }
-                catch (Exception e) 
-                {
+                    fechaLanzamiento = (Date) dateFormat.parse(input);
+                } catch (Exception e) {
                     // Si ocurre un error (por ejemplo, formato incorrecto)
                     System.out.println("El formato de la fecha es incorrecto.");
                     fechaLanzamiento = null;
@@ -204,14 +189,11 @@ public class Main {
                 // Crear un SimpleDateFormat para el formato de fecha esperado
                 dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 
-                try 
-                {
+                try {
                     // Intentar convertir el String en un objeto Date
-                    fechaLanzamiento = dateFormat.parse(input);
+                    fechaLanzamiento = (Date) dateFormat.parse(input);
 
-                } 
-                catch (Exception e)
-                {
+                } catch (Exception e) {
                     // Si ocurre un error (por ejemplo, formato incorrecto)
                     System.out.println("El formato de la fecha es incorrecto.");
                     fechaLanzamiento = null;
@@ -221,10 +203,10 @@ public class Main {
                 SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
                 System.out.println("ID Videojuego: " + videojuegoMod.getId_videojuego()
                         + "\nid_plataforma: " + videojuegoMod.getId_plataforma()
-                            + "\nNombre: " + videojuegoMod.getNombre()
-                            + "\nGenero: " + videojuegoMod.getGenero()
-                            + "\nPrecio: " + videojuegoMod.getPrecio()
-                            + "\nFecha Lanzamiento: " + sdf.format(videojuegoMod.getFecha_lanzamiento()));
+                        + "\nNombre: " + videojuegoMod.getNombre()
+                        + "\nGenero: " + videojuegoMod.getGenero()
+                        + "\nPrecio: " + videojuegoMod.getPrecio()
+                        + "\nFecha Lanzamiento: " + sdf.format(videojuegoMod.getFecha_lanzamiento()));
                 System.out.println("Videojuego modificado correctamente.");
                 break;
 
@@ -241,9 +223,8 @@ public class Main {
         }
     }
 
-    public static void menuDlcs() throws ExcepcionesVideojuegos
-    {
-        SimpleDateFormat dateFormat = null;
+    public static void menuDlcs() throws ExcepcionesVideojuegos {
+
         DlcDao dlcDao = new DlcDao();
         System.out.println("----MENU DLCS----");
         System.out.println("1.-Listar todos los DLC:");
@@ -255,8 +236,7 @@ public class Main {
         System.out.println("0.-Volver a menú Principal.");
         eleccion = sc.nextInt();
 
-        switch (eleccion) 
-        {
+        switch (eleccion) {
             case 0:
                 System.out.println("Volviendo al Menú principal");
                 break;
@@ -264,8 +244,7 @@ public class Main {
             case 1:
                 System.out.println("Lista de DLCs:");
                 List<Dlc> dlcs = dlcDao.listarTodosLosDlcs();
-                for (Dlc dlc : dlcs) 
-                {
+                for (Dlc dlc : dlcs) {
                     System.out.println("ID DLC: " + dlc.getId_dlc()
                             + "\nID Videojuego: " + dlc.getId_videojuego()
                             + "\nNombre: " + dlc.getNombre()
@@ -277,8 +256,7 @@ public class Main {
             case 2:
                 System.out.println("Lista de DLCs por fecha de lanzamiento:");
                 List<Dlc> dlcsPorFecha = dlcDao.ordenarDlcsPorFecha();
-                for (Dlc dlc : dlcsPorFecha) 
-                {
+                for (Dlc dlc : dlcsPorFecha) {
                     System.out.println("ID DLC: " + dlc.getId_dlc()
                             + "\nID Videojuego: " + dlc.getId_videojuego()
                             + "\nNombre: " + dlc.getNombre()
@@ -290,20 +268,16 @@ public class Main {
             case 3:
                 System.out.println("Introduce el nombre del DLC buscado:");
                 List<Dlc> dlcBuscado = dlcDao.buscarDlcPorNombre(sc.next());
-                if (dlcBuscado != null) 
-                {
-                    for(Dlc dlc : dlcBuscado)
-                    {
+                if (dlcBuscado != null) {
+                    for (Dlc dlc : dlcBuscado) {
                         System.out.println("ID DLC: " + dlc.getId_dlc()
-                            + "\nID Videojuego: " + dlc.getId_videojuego()
-                            + "\nNombre: " + dlc.getNombre()
-                            + "\nPrecio: " + dlc.getPrecio()
-                            + "\nFecha de lanzamiento: " + dlc.getFecha_lanzamiento());
+                                + "\nID Videojuego: " + dlc.getId_videojuego()
+                                + "\nNombre: " + dlc.getNombre()
+                                + "\nPrecio: " + dlc.getPrecio()
+                                + "\nFecha de lanzamiento: " + dlc.getFecha_lanzamiento());
                     }
-                    
-                }
-                else 
-                {
+
+                } else {
                     System.out.println("DLC no encontrado.");
                 }
                 break;
@@ -319,22 +293,15 @@ public class Main {
                 String inputFecha = sc.next();
                 dateFormat = new SimpleDateFormat("dd/MM/yyyy");
                 Date fechaLanzamiento;
-                try 
-                {
-                    fechaLanzamiento = dateFormat.parse(inputFecha);
-                } 
-                catch (Exception e) 
-                {
+                try {
+                    fechaLanzamiento = (Date) dateFormat.parse(inputFecha);
+                } catch (Exception e) {
                     System.out.println("Formato de fecha incorrecto.");
                     fechaLanzamiento = null;
                 }
                 Dlc nuevoDlc = new Dlc(-1, idVideojuego, nombreDlc, precioDlc, fechaLanzamiento);
                 dlcDao.crearNuevoDlc(nuevoDlc);
                 break;
-                
-               
-
-                
 
             case 5:
                 System.out.println("Introduce el ID del DLC a modificar:");
@@ -349,12 +316,9 @@ public class Main {
                 String nuevaFecha = sc.next();
                 dateFormat = new SimpleDateFormat("dd/MM/yyyy");
                 Date nuevafechaLanzamiento = null;
-                try 
-                {
-                    nuevafechaLanzamiento = dateFormat.parse(nuevaFecha);
-                } 
-                catch (Exception e) 
-                {
+                try {
+                    nuevafechaLanzamiento = (Date) dateFormat.parse(nuevaFecha);
+                } catch (Exception e) {
                     System.out.println("Formato de fecha incorrecto.");
                     fechaLanzamiento = null;
                 }
@@ -373,9 +337,8 @@ public class Main {
                 break;
         }
     }
-    
-    private static void menuPlataformas() 
-    {
+
+    private static void menuPlataformas() {
         PlataformaDao platDao = new PlataformaDao();
         VideojuegoDao videojuegoDao = new VideojuegoDao();
         System.out.println("----MENU Plataformas----");
@@ -386,67 +349,113 @@ public class Main {
         System.out.println("6.-Eliminar Plataforma:");
         System.out.println("0.-Volver a menú Principal.");
         eleccion = sc.nextInt();
-        
+
         switch (eleccion) {
             case 0:
                 System.out.println("Volviendo al menú principal");
                 break;
-                
+
             case 1:
                 System.out.println("Lista de Plataformas:");
                 try {
                     List<Plataforma> plataformas = platDao.listarTodasPlataformas();
-                for (Plataforma plat : plataformas) 
-                {
-                    System.out.println("ID Plataforma: " + plat.getId_plataforma()
-                            + "\nNombre: " + plat.getNombre()
-                            + "\nFecha de Fundación: " + plat.getFecha_fundacion());
+                    for (Plataforma plat : plataformas) {
+                        System.out.println("ID Plataforma: " + plat.getId_plataforma()
+                                + "\nNombre: " + plat.getNombre()
+                                + "\nFecha de Fundación: " + plat.getFecha_fundacion());
 
-                }
+                    }
                 } catch (ExcepcionesVideojuegos e) {
                     System.err.println(e.getMensajeUsuario());
                 }
                 break;
 
-                
             case 2:
                 try {
                     System.out.println("Introduce el nombre de la plataforma buscada");
                     String nombBuscado = sc.next();
                     List<Plataforma> plataformasBuscadas = platDao.buscarPlataformaPorNombre(nombBuscado);
-                    for(Plataforma p : plataformasBuscadas)
-                    {
-                         System.out.println("ID Videojuego: " + p.getId_plataforma()
-                        + "\nid_plataforma: " + p.getNombre()
-                            + "\nNombre: " + p.getNombre()
-                            + "\nFecha de Findación: " + p.getFecha_fundacion());
+                    for (Plataforma p : plataformasBuscadas) {
+                        System.out.println("ID Videojuego: " + p.getId_plataforma()
+                                + "\nid_plataforma: " + p.getNombre()
+                                + "\nNombre: " + p.getNombre()
+                                + "\nFecha de Findación: " + p.getFecha_fundacion());
                     }
-                    
+
                 } catch (ExcepcionesVideojuegos e) {
                     System.err.println(e.getMensajeUsuario());
                 }
                 break;
-                
+
             case 3:
-                
+
                 break;
-                
+
             case 4:
-                
+                System.out.println("Introduce el nombre de la plataforma");
+                String nombrePlat = sc.next();
+                System.out.println("Introduce la fecha de fundación de la plataforma (dd/MM/yyyy):");
+                String nuevaFecha = sc.next();
+                dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+                java.util.Date utilDate = null;
+                try {
+                    utilDate = dateFormat.parse(nuevaFecha);
+                } catch (Exception e) {
+                    System.out.println("Formato de fecha incorrecto.");
+                    utilDate = null;
+                    e.printStackTrace();
+                }
+
+                java.sql.Date fechaFundacion = null;
+
+                if (utilDate != null) {
+                    fechaFundacion = new java.sql.Date(utilDate.getTime());
+                }
+
+                Plataforma p = new Plataforma(-1, nombrePlat, fechaFundacion);
+                try {
+                    platDao.crearNuevaPlataforma(p);
+                } catch (ExcepcionesVideojuegos e) {
+                    e.getMensajeUsuario();
+                }
                 break;
-                
+
             case 5:
                 try {
-                    System.out.println("Introduce el ID de la plataforma a eliminar");
-                    platDao.borrarPlataforma(1);
+                    System.out.println("Introduce el ID de la plataforma a modificar");
+                    int id = sc.nextInt();
+                    System.out.println("Introduce el nuevo nombre de la plataforma");
+                    String nombrePlatMod = sc.next();
+                    System.out.println("Introduce la fecha de fundación de la plataforma (dd/MM/yyyy):");
+                    nuevaFecha = sc.next();
+                    dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+                    utilDate = null;
+                    try {
+                        utilDate = dateFormat.parse(nuevaFecha);
+                    } catch (Exception e) {
+                        System.out.println("Formato de fecha incorrecto.");
+                        utilDate = null;
+                        e.printStackTrace();
+                    }
+
+                    fechaFundacion = null;
+
+                    if (utilDate != null) {
+                        fechaFundacion = new java.sql.Date(utilDate.getTime());
+                    }
+                    Plataforma platMod = new Plataforma(id, nombrePlatMod, fechaFundacion);
+                    platDao.actualizarPlataforma(platMod);
                 } catch (ExcepcionesVideojuegos e) {
                     System.err.println(e.getMensajeUsuario());
                 }
                 break;
-                
+
             case 6:
                 try {
-                    
+
+                    System.out.println("Introduce el ID de la plataforma a eliminar");
+                    int id = sc.nextInt();
+                    platDao.borrarPlataforma(id);
                 } catch (Exception e) {
                 }
                 break;
